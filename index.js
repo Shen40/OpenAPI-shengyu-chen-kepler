@@ -8,3 +8,4 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=40.4862&longitude=-74.451
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+  
