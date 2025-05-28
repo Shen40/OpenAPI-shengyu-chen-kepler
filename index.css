@@ -1,14 +1,26 @@
 ul{
     list-style-type: none;
 }
-body{
-    text-align: center;
-    background-image: url("R.jpg");
-    color: black; 
-}
 nav a{
     padding: 10px;
     color:black;
     gap: 10px;
     text-decoration: none;
+}
+
+@media (min-width:320px){/*mobile*/
+    body{
+    text-align: left;
+    background-image: url("R.jpg");
+    color: black; 
+    }
+}
+
+@media (min-width:1025px){/*desktop*/
+    body{
+    text-align: center;
+    background-image: url("R.jpg");
+    color: black;
+    font-size: 16px;
+    }
 }
