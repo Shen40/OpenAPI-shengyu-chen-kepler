@@ -40,10 +40,10 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hou
 
     const precipSection = document.querySelector("#precipitation");
     const precipList = precipSection.querySelector("ul");
-
+    
     for(let i =0; i<pre.length;i++){
       let display = document.createElement("li"); 
-      display.innerText = `Time: ${times[i]}, Precip-Prob: ${pre[i]}°F`; 
+      display.innerText = `Time: ${times[i]}, Probability: ${pre[i]}%`; 
       precipList.appendChild(display);
     }
     })

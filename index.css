@@ -1,3 +1,14 @@
 ul{
     list-style-type: none;
 }
+body{
+    text-align: center;
+    background-image: url("R.jpg");
+    color: black; 
+}
+nav a{
+    padding: 10px;
+    color:black;
+    gap: 10px;
+    text-decoration: none;
+}
