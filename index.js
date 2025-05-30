@@ -15,9 +15,15 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hou
     const tempSection = document.querySelector("#temperature");
     const tempList = tempSection.querySelector("ul");
 
+    const date = document.querySelector("#date");
+    let today = document.createElement("h1");
+    today.innerText = `Today's Date: ${times[0].substring(0,10)}`; 
+    date.appendChild(today);//today's date
+
+
     for(let i=0;i<temp.length;i++){ 
     let display = document.createElement("li"); 
-    display.innerText = `Time: ${times[i]}, Temp: ${temp[i]}°F`; 
+    display.innerText = `Time: ${times[i].substring(11,times[i].length)}, Temp: ${temp[i]}°F`; 
     tempList.appendChild(display);
     }
 
@@ -43,7 +49,7 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hou
     
     for(let i =0; i<pre.length;i++){
       let display = document.createElement("li"); 
-      display.innerText = `Time: ${times[i]}, Probability: ${pre[i]}%`; 
+      display.innerText = `Time: ${times[i].substring(11,times[i].length)}, Probability: ${pre[i]}%`; 
       precipList.appendChild(display);
     }
     })
